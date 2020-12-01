@@ -163,7 +163,7 @@ function App() {
           const [showCity, setshowCity] = useState(false);
           const showCityhandler = () => {
             setshowCity(true);
-            document.removeEventListener("click", showCityhandler);
+            //document.removeEventListener("click", showCityhandler);
           };
           return (
             <ul
