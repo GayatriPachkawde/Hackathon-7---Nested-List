@@ -161,13 +161,13 @@ function App() {
       <ul>
         {states.map((state, index) => {
           const [showCity, setshowCity] = useState(false);
-          const showCityhandler = () => {
-            setshowCity(true);
-            //document.removeEventListener("click", showCityhandler);
+          const showCityhandler = (event) => {
+            event.stopPropagation();
+            setshowCity(!showCity);
           };
           return (
             <ul
-              onClick={() => showCityhandler()}
+              onClick={(event) => showCityhandler(event)}
               id={`state${index + 1}`}
               key={index}
             >
